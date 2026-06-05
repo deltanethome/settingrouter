@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Katalog modem ZTE asli - F609, F660, F670L"
+    />
+    <title>ZTE Modem Catalog | Setting Router</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Segoe UI,
+          sans-serif;
+      }
+      body {
+        background: #070b17;
+        color: #fff;
+        background-image: radial-gradient(circle at top, #1a2550, #070b17 60%);
+      }
+      a {
+        text-decoration: none;
+      }
+      .header {
+        text-align: center;
+        padding: 60px 20px 30px;
+      }
+      .company {
+        letter-spacing: 3px;
+        color: #93aaff;
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      .hero {
+        font-size: 46px;
+        font-weight: 800;
+        background: linear-gradient(90deg, #5eb6ff, #9d7cff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .sub {
+        color: #b9c6e6;
+        margin-top: 10px;
+      }
+      .container {
+        max-width: 1250px;
+        margin: auto;
+        padding: 25px;
+      }
+      .search {
+        max-width: 650px;
+        margin: 25px auto 40px;
+      }
+      .search input {
+        width: 100%;
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.06);
+        color: #fff;
+        outline: none;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+        transition: 0.35s;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+      }
+      .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        background: #fff;
+        padding: 10px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .content h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+      .content p {
+        color: #b5c3e6;
+        margin-bottom: 18px;
+        line-height: 1.5;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 14px;
+        background: linear-gradient(90deg, #2667ff, #6b42ff);
+        color: #fff;
+        font-weight: 700;
+      }
+      .back {
+        display: inline-block;
+        margin-bottom: 30px;
+        color: #8ea8ff;
+      }
+      .footer {
+        text-align: center;
+        padding: 35px;
+        color: #7985a8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="company">PT. RUBBY ADI SIS JI YUD</div>
+      <div class="hero">MODEM ZTE</div>
+      <div class="sub">Pilih type modem ZTE Anda</div>
+    </div>
+    <div class="container">
+      <a class="back" href="index.html">← Kembali ke Home</a>
+      <div class="search">
+        <input type="text" id="search" placeholder="Cari type modem ZTE..." />
+      </div>
+      <div class="cards">
+        <div class="card" data-name="f609">
+          <img src="images/ztef609.png" alt="ZTE F609" />
+          <div class="content">
+            <h3>ZTE F609</h3>
+            <p>Modem GPON populer untuk WiFi rumah.</p>
+            <a class="btn" href="zte-f609.html">Lihat Tutorial</a>
+          </div>
+        </div>
+        <div class="card" data-name="f660">
+          <img src="images/ztef660.png" alt="ZTE F660" />
+          <div class="content">
+            <h3>ZTE F660</h3>
+            <p>ONT ZTE dengan fitur WiFi dan telepon.</p>
+            <a class="btn" href="zte-f660.html">Lihat Tutorial</a>
+          </div>
+        </div>
+        <div class="card" data-name="f670l">
+          <img src="images/ztef670l.png" alt="ZTE F670L" />
+          <div class="content">
+            <h3>ZTE F670L</h3>
+            <p>Dual band 2.4GHz & 5GHz.</p>
+            <a class="btn" href="zte670l.html">Lihat Tutorial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">© 2026 Setting Router by DeltaNet</div>
+    <script>
+      const s = document.getElementById("search");
+      const c = document.querySelectorAll(".card");
+      s.addEventListener("keyup", () => {
+        let v = s.value.toLowerCase();
+        c.forEach(
+          (x) =>
+            (x.style.display = x.dataset.name.includes(v) ? "block" : "none"),
+        );
+      });
+    </script>
+    <script src="floating-wa.js"></script>
+  </body>
+</html>

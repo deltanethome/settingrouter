@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, sans-serif
+}
+
+body {
+  background: #070b17;
+  color: #fff;
+  background-image: radial-gradient(circle at top, #18254f, #070b17 60%);
+}
+
+.header {
+  text-align: center;
+  padding: 70px 20px 35px
+}
+
+.company {
+  font-size: 15px;
+  letter-spacing: 4px;
+  color: #9fb7ff;
+  margin-bottom: 15px
+}
+
+.hero {
+  font-size: 58px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #66b3ff, #9f7bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+
+.sub {
+  color: #c9d4ff;
+  margin-top: 10px
+}
+
+.brandby {
+  color: #8fa8ff;
+  font-size: 14px;
+  margin-top: 12px
+}
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px
+}
+
+.searchbox {
+  max-width: 750px;
+  margin: 20px auto
+}
+
+.searchbox input {
+  width: 100%;
+  padding: 18px 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, .06);
+  color: #fff;
+  font-size: 16px;
+  outline: none
+}
+
+.results {
+  max-width: 750px;
+  margin: 15px auto 35px;
+  display: none;
+  background: rgba(255, 255, 255, .05);
+  border-radius: 20px;
+  overflow: hidden
+}
+
+.result-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, .08)
+}
+
+.result-item a {
+  color: #fff;
+  text-decoration: none
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px
+}
+
+.card {
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 26px;
+  overflow: hidden;
+  transition: .35s;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .35)
+}
+
+.card:hover {
+  transform: translateY(-8px)
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover
+}
+
+.content {
+  padding: 22px
+}
+
+.content h3 {
+  font-size: 24px;
+  margin-bottom: 10px
+}
+
+.content p {
+  color: #b8c4e7;
+  margin-bottom: 18px
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 14px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #2667ff, #6b42ff);
+  font-weight: 700
+}
+
+.popular {
+  margin: 45px 0
+}
+
+.popular h2 {
+  margin-bottom: 18px
+}
+
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px
+}
+
+.tag {
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, .06);
+  border-radius: 14px;
+  color: #bcd0ff
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 35px;
+  color: #7f8cb3;
+  border-top: 1px solid rgba(255, 255, 255, .08)
+}
