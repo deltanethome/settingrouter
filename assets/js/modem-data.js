@@ -5,10 +5,15 @@ const modems = [
   { brand: "ZTE", model: "Katalog ZTE", link: "zte.html", available: true },
   {
     brand: "FiberHome",
-    model: "Panduan Dasar",
+    model: "D2 F3",
     link: "fiberhome.html",
     available: true,
   },
-  { brand: "Huawei", model: "Coming Soon", link: "", available: false },
-  { brand: "China Mobile", model: "Coming Soon", link: "", available: false },
+  { brand: "Huawei", model: "5V5", link: "huawei.html", available: true },
+  {
+    brand: "China Mobile",
+    model: "GM220 NV3A XP663N",
+    link: "chinamobile.html",
+    available: true,
+  },
 ];
