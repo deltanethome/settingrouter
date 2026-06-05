@@ -1,27 +1,40 @@
-const input = document.getElementById('globalSearch');
-const results = document.getElementById('results');
+const input = document.getElementById("globalSearch");
+const results = document.getElementById("results");
 
-input.addEventListener('keyup', () => {
-    const q = input.value.toLowerCase();
-    results.innerHTML = '';
+function renderResults(items) {
+  results.innerHTML = "";
+  results.style.display = "block";
+
+  if (items.length === 0) {
+    results.innerHTML =
+      '<div class="result-item"><span>Modem belum tersedia. Hubungi CS WhatsApp.</span></div>';
+    return;
+  }
+
+  items.forEach((modem) => {
+    const label = `${modem.brand} ${modem.model}`;
+    const content = modem.available
+      ? `<a href="${modem.link}">${label}</a>`
+      : `<span>${label} - segera hadir</span>`;
+
+    results.insertAdjacentHTML("beforeend", `<div class="result-item">${content}</div>`);
+  });
+}
+
+if (input && results) {
+  input.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
 
     if (!q) {
-        results.style.display = 'none';
-        return;
+      results.innerHTML = "";
+      results.style.display = "none";
+      return;
     }
 
-    const found = modems.filter(m =>
-        (m.brand + ' ' + m.model).toLowerCase().includes(q)
+    const found = modems.filter((modem) =>
+      `${modem.brand} ${modem.model}`.toLowerCase().includes(q),
     );
 
-    results.style.display = 'block';
-
-    if (found.length === 0) {
-        results.innerHTML = '<div class="result-item">Modem belum tersedia. Hubungi CS WhatsApp.</div>';
-        return;
-    }
-
-    found.forEach(m => {
-        results.innerHTML += `<div class='result-item'><a href='${m.link}'>${m.brand} ${m.model}</a></div>`;
-    });
-});
+    renderResults(found);
+  });
+}

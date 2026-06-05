@@ -3,279 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SETTING ROUTER | Help Center</title>
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family:
-          Segoe UI,
-          sans-serif;
-      }
-
-      body {
-        background: #070b17;
-        color: #fff;
-        background-image: radial-gradient(circle at top, #18254f, #070b17 60%);
-      }
-
-      .header {
-        text-align: center;
-        padding: 70px 20px 35px;
-      }
-
-      .company {
-        font-size: 15px;
-        letter-spacing: 4px;
-        color: #9fb7ff;
-        margin-bottom: 15px;
-      }
-
-      .hero {
-        font-size: 58px;
-        font-weight: 800;
-        background: linear-gradient(90deg, #66b3ff, #9f7bff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .sub {
-        color: #c9d4ff;
-        margin-top: 10px;
-      }
-      .brandby {
-        color: #8fa8ff;
-        font-size: 14px;
-        margin-top: 12px;
-      }
-
-      .container {
-        max-width: 1250px;
-        margin: auto;
-        padding: 20px;
-      }
-
-      .searchbox {
-        max-width: 750px;
-        margin: 20px auto;
-      }
-      .searchbox input {
-        width: 100%;
-        padding: 18px 22px;
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.06);
-        color: #fff;
-        font-size: 16px;
-        outline: none;
-      }
-
-      .results {
-        max-width: 750px;
-        margin: 15px auto 35px;
-        display: none;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        overflow: hidden;
-      }
-      .result-item {
-        padding: 16px 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .result-item a {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 25px;
-      }
-
-      .card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 26px;
-        overflow: hidden;
-        transition: 0.35s;
-        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
-      }
-      .card:hover {
-        transform: translateY(-8px);
-      }
-
-      .card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-      }
-
-      .content {
-        padding: 22px;
-      }
-      .content h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-      .content p {
-        color: #b8c4e7;
-        margin-bottom: 18px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 12px 22px;
-        border-radius: 14px;
-        color: #fff;
-        text-decoration: none;
-        background: linear-gradient(90deg, #2667ff, #6b42ff);
-        font-weight: 700;
-      }
-
-      .popular {
-        margin: 45px 0;
-      }
-      .popular h2 {
-        margin-bottom: 18px;
-      }
-      .popular-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .tag {
-        padding: 12px 18px;
-        background: rgba(255, 255, 255, 0.06);
-        border-radius: 14px;
-        color: #bcd0ff;
-      }
-
-      .footer {
-        margin-top: 50px;
-        text-align: center;
-        padding: 35px;
-        color: #7f8cb3;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-      }
-    </style>
+    <meta
+      name="description"
+      content="Help center setting router untuk mengganti nama WiFi dan password modem pelanggan DeltaNet, Jafin Network, PetaniNet, dan Rubby Group."
+    />
+    <title>Setting Router | Help Center</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="header">
-      <div class="company">PT. RUBBY ADI SIS JI YUD</div>
-      <div class="hero">SETTING ROUTER</div>
-      <div class="sub">Help Center Mengganti Nama WiFi & Password Router</div>
-      <div class="brandby">
-        by DeltaNet • Jafin Network • PetaniNet • Rubby Group
-      </div>
-    </div>
+    <header class="site-header">
+      <nav class="topbar" aria-label="Navigasi utama">
+        <a class="brand" href="index.html" aria-label="Setting Router Home">
+          <span class="brand-mark">SR</span>
+          <span>
+            <strong>Setting Router</strong>
+            <small>Help Center</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#katalog">Katalog</a>
+          <a href="#populer">Populer</a>
+          <a href="#bantuan">Bantuan</a>
+        </div>
+      </nav>
 
-    <div class="container">
-      <div class="searchbox">
-        <input
-          type="text"
-          id="globalSearch"
-          placeholder="Cari modem... contoh: F670L / FiberHome / F609"
-        />
-      </div>
-
-      <div class="results" id="results"></div>
-
-      <div class="cards">
-        <div class="card">
-          <img src="images/ZTE-ZXHN-F609.jpg" />
-          <div class="content">
-            <h3>ZTE</h3>
-            <p>F609, F660, F670L dan lainnya.</p>
-            <a class="btn" href="zte.html">Pilih Modem</a>
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">PT. RUBBY ADI SIS JI YUD</p>
+          <h1>Setting Router</h1>
+          <p class="hero-text">
+            Pusat panduan mengganti nama WiFi dan password modem pelanggan
+            DeltaNet, Jafin Network, PetaniNet, dan Rubby Group.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#katalog">Pilih Modem</a>
+            <a class="btn secondary" href="#bantuan">Hubungi CS</a>
           </div>
         </div>
 
-        <div class="card">
-          <img src="images/fiberhome.png" />
-          <div class="content">
-            <h3>FiberHome</h3>
-            <p>Panduan modem FiberHome.</p>
-            <a class="btn" href="fiberhome.html">Pilih Modem</a>
+        <div class="hero-panel" aria-label="Ringkasan layanan">
+          <div class="status-card">
+            <span class="status-dot"></span>
+            <span>Panduan aktif</span>
+            <strong>4 Brand</strong>
+          </div>
+          <div class="router-preview">
+            <img src="images/ZTE-ZXHN-F609.jpg" alt="Modem ZTE F609" />
           </div>
         </div>
+      </section>
+    </header>
 
-        <div class="card">
-          <img src="images/huawei.png" />
-          <div class="content">
-            <h3>Huawei</h3>
-            <p>Pusat bantuan modem Huawei.</p>
-            <a class="btn" href="huawei.html">Pilih Modem</a>
-          </div>
+    <main class="container">
+      <section class="search-section" aria-label="Cari modem">
+        <div class="section-heading">
+          <p class="eyebrow">Cari cepat</p>
+          <h2>Temukan tutorial modem Anda</h2>
+        </div>
+        <div class="searchbox">
+          <input
+            type="search"
+            id="globalSearch"
+            placeholder="Cari modem, contoh: F670L, FiberHome, F609"
+            autocomplete="off"
+          />
+        </div>
+        <div class="results" id="results" aria-live="polite"></div>
+      </section>
+
+      <section class="catalog-section" id="katalog">
+        <div class="section-heading">
+          <p class="eyebrow">Katalog brand</p>
+          <h2>Pilih merek modem</h2>
         </div>
 
-        <div class="card">
-          <img src="images/chinamobile.png" />
-          <div class="content">
-            <h3>China Mobile</h3>
-            <p>Panduan modem China Mobile / CMCC.</p>
-            <a class="btn" href="chinamobile.html">Pilih Modem</a>
-          </div>
-        </div>
-      </div>
+        <div class="cards">
+          <article class="card">
+            <img src="images/ZTE-ZXHN-F609.jpg" alt="Modem ZTE" />
+            <div class="content">
+              <span class="pill available">Tersedia</span>
+              <h3>ZTE</h3>
+              <p>F609, F660, F670L, dan katalog ZTE lainnya.</p>
+              <a class="btn card-btn" href="zte.html">Pilih Modem</a>
+            </div>
+          </article>
 
-      <div class="popular">
-        <h2>🔥 Modem Populer</h2>
+          <article class="card">
+            <img src="images/fiberhome.png" alt="Modem FiberHome" />
+            <div class="content">
+              <span class="pill available">Tersedia</span>
+              <h3>FiberHome</h3>
+              <p>Panduan dasar modem FiberHome untuk pelanggan rumah.</p>
+              <a class="btn card-btn" href="fiberhome.html">Pilih Modem</a>
+            </div>
+          </article>
+
+          <article class="card muted">
+            <img src="images/huawei.png" alt="Modem Huawei" />
+            <div class="content">
+              <span class="pill pending">Segera hadir</span>
+              <h3>Huawei</h3>
+              <p>Halaman tutorial Huawei belum tersedia di repository.</p>
+              <button class="btn card-btn disabled" type="button" disabled>
+                Belum Tersedia
+              </button>
+            </div>
+          </article>
+
+          <article class="card muted">
+            <img src="images/chinamobile.png" alt="Modem China Mobile" />
+            <div class="content">
+              <span class="pill pending">Segera hadir</span>
+              <h3>China Mobile</h3>
+              <p>Halaman tutorial China Mobile belum tersedia di repository.</p>
+              <button class="btn card-btn disabled" type="button" disabled>
+                Belum Tersedia
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="popular" id="populer">
+        <div class="section-heading">
+          <p class="eyebrow">Paling sering dicari</p>
+          <h2>Modem populer</h2>
+        </div>
         <div class="popular-list">
-          <div class="tag">ZTE F670L</div>
-          <div class="tag">ZTE F609</div>
-          <div class="tag">FiberHome HG6243C</div>
+          <a class="tag" href="zte670l.html">ZTE F670L</a>
+          <a class="tag" href="zte-f609.html">ZTE F609</a>
+          <a class="tag" href="zte-f660.html">ZTE F660</a>
+          <a class="tag" href="fiberhome.html">FiberHome</a>
         </div>
-      </div>
+      </section>
 
-      <div class="footer">
-        <p>PT. RUBBY ADI SIS JI YUD</p>
-        <p>
-          Setting Router Center • DeltaNet • Jafin Network • PetaniNet • Rubby
-          Group
-        </p>
-      </div>
-    </div>
+      <section class="help-section" id="bantuan">
+        <div>
+          <p class="eyebrow">Butuh bantuan?</p>
+          <h2>CS siap bantu cek tipe modem pelanggan</h2>
+          <p>
+            Jika pelanggan belum tahu tipe router yang dipakai, arahkan untuk
+            menghubungi CS melalui tombol WhatsApp di pojok kanan bawah.
+          </p>
+        </div>
+        <a
+          class="btn primary"
+          href="https://wa.me/6285850102226?text=halo%20admin%2C%20saya%20butuh%20bantuan%20tatacara%20ganti%20nama%2Fpassword%20wifi%2C%20router%20apakah%20yang%20saya%20pakai%20sekarang%3F"
+          target="_blank"
+          rel="noopener"
+        >
+          Chat CS DeltaNET
+        </a>
+      </section>
+    </main>
 
-    <script>
-      const modems = [
-        { brand: "ZTE", model: "F609", link: "zte-f609.html" },
-        { brand: "ZTE", model: "F660", link: "zte-f660.html" },
-        { brand: "ZTE", model: "F670L", link: "zte670l.html" },
-      ];
+    <footer class="footer">
+      <p>PT. RUBBY ADI SIS JI YUD</p>
+      <p>Setting Router Center - DeltaNet - Jafin Network - PetaniNet - Rubby Group</p>
+    </footer>
 
-      const input = document.getElementById("globalSearch");
-      const results = document.getElementById("results");
-
-      input.addEventListener("keyup", () => {
-        const q = input.value.toLowerCase();
-        results.innerHTML = "";
-
-        if (!q) {
-          results.style.display = "none";
-          return;
-        }
-
-        const found = modems.filter((m) =>
-          (m.brand + " " + m.model).toLowerCase().includes(q),
-        );
-
-        results.style.display = "block";
-
-        if (found.length === 0) {
-          results.innerHTML =
-            '<div class="result-item">Modem belum tersedia. Hubungi CS WhatsApp.</div>';
-          return;
-        }
-
-        found.forEach((m) => {
-          results.innerHTML += `<div class='result-item'><a href='${m.link}'>${m.brand} ${m.model}</a></div>`;
-        });
-      });
-    </script>
-
+    <script src="assets/js/modem-data.js"></script>
+    <script src="assets/js/app.js"></script>
     <script src="floating-wa.js"></script>
   </body>
 </html>
